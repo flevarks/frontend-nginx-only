@@ -77,6 +77,8 @@ services:
   nginx:
     image: nginx:latest
     container_name: nginx
+    labels:
+      io.portainer.accesscontrol.teams: /certh
     ports:
       - "5173:80"
     restart: unless-stopped
